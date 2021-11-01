@@ -31,7 +31,9 @@ I'd find a way to store this on a diferent set of json strings on redis because 
 `clear`: O(1)
 ### 3. How does your code work?
 `request_handled(ip_address)` method receives the ip_address as a string, gets the string data from redis and parsed the content, sets the default value as zero which is going to be returned whenever a key does not exist in the hash and store the ip_address with a counter and sets the sting in redis as a json with the new information added.
+
 `top100(limit = 100)` method gets the string data from redis and parsed the content. Then, sorts the hash desdendently, this returns an array, then pick the first 100 positions and then convert the array to hash again. The method can receive the limit as an argument, so instead of top 100, we can do top 5 or top 10.
+
 `clear` method uses a redis method to remove the content from the redis.
 
 ### 4. What other approaches did you decide not to pursue?
