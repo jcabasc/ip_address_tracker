@@ -14,8 +14,10 @@ The following services need to be up and running.
 
 ```sh
   $ redis-server & (Runs redis as a backgroung process)
-  $ ruby app.rb
 ```
+
+Run the following to run the methods.
+`$ ruby app.rb`
 
 # Questions
 
